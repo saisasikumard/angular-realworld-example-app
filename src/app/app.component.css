@@ -1,0 +1,24 @@
+.components-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.component-section {
+  flex: 1;
+  min-width: 400px;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .components-container {
+    flex-direction: column;
+  }
+
+  .component-section {
+    min-width: auto;
+  }
+}

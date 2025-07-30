@@ -1,0 +1,55 @@
+<div class="anime-container">
+  <h2>🎌 Anime Characters Explorer</h2>
+
+  <div class="category-section">
+    <h3>Select an Anime:</h3>
+    <div class="category-buttons">
+      <button
+        *ngFor="let category of animeCategories"
+        (click)="selectCategory(category.name)"
+        class="category-btn"
+        [class.active]="selectedCategory === category.name"
+      >
+        {{ category.name }}
+      </button>
+    </div>
+
+    <button (click)="clearSelection()" class="clear-btn">
+      Clear Selection
+    </button>
+  </div>
+
+  <div class="characters-section" *ngIf="selectedCategory">
+    <h3>Characters from {{ selectedCategory }}:</h3>
+    <div class="characters-grid">
+      <div *ngFor="let character of selectedCharacters" class="character-card">
+        <span class="character-name">{{ character }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-section" *ngIf="!selectedCategory">
+    <div class="info-card">
+      <h4>How to use:</h4>
+      <ul>
+        <li><strong>Click any anime button</strong> to see its characters</li>
+        <li><strong>Click "Clear Selection"</strong> to reset</li>
+        <li>
+          <strong>Try different categories</strong> to explore more characters
+        </li>
+      </ul>
+      <p>This demonstrates:</p>
+      <ul>
+        <li>
+          <strong>*ngFor:</strong> Loops through arrays to display multiple
+          items
+        </li>
+        <li><strong>*ngIf:</strong> Conditionally shows/hides content</li>
+        <li><strong>[class.active]:</strong> Dynamic CSS class binding</li>
+        <li>
+          <strong>Event Binding:</strong> (click) handles button interactions
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

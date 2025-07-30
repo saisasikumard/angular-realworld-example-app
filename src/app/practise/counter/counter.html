@@ -1,0 +1,27 @@
+<div class="counter-container">
+  <h2>Counter Component</h2>
+
+  <div class="counter-display">
+    <span class="count-value">{{ count }}</span>
+  </div>
+
+  <div class="counter-controls">
+    <button (click)="decrement()" class="btn btn-decrease">-</button>
+    <button (click)="increment()" class="btn btn-increase">+</button>
+    <button (click)="reset()" class="btn btn-reset">Reset</button>
+  </div>
+
+  <div class="counter-info">
+    <p>This demonstrates:</p>
+    <ul>
+      <li>
+        <strong>Interpolation:</strong> {{ count }} displays the current value
+      </li>
+      <li><strong>Event Binding:</strong> (click) handles button clicks</li>
+      <li>
+        <strong>Property Binding:</strong> Component properties are bound to
+        template
+      </li>
+    </ul>
+  </div>
+</div>
