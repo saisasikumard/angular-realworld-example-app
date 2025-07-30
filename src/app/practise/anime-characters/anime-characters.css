@@ -45,14 +45,14 @@
 }
 
 .category-btn:hover {
-  background: rgba(17, 179, 52, 0.7);
+  background: linear-gradient(135deg, #c9dc3e 0%, #e29505 100%);
   transform: translateY(-6px);
   box-shadow: 0 5px 15px rgba(15, 6, 6, 0.9);
 }
 
 .category-btn.active {
-  background: #ff6b6b;
-  border-color: #ff6b6b;
+  background: linear-gradient(135deg, #c9dc3e 0%, #e29505 100%);
+  border-color: #ccd2d2;
   box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
 }
 
